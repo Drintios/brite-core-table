@@ -6,10 +6,17 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "solve-quiz": "node quiz.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.12",
+    "@fortawesome/free-solid-svg-icons": "^5.6.3",
+    "@fortawesome/vue-fontawesome": "^0.1.5",
+    "firebase": "^5.7.3",
+    "moment": "^2.23.0",
     "vue": "^2.5.21",
+    "vue2-datepicker": "^2.8.0",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -23,7 +30,8 @@
     "chai": "^4.1.2",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.5.21",
+    "fernet": "^0.3.1"
   },
   "eslintConfig": {
     "root": true,
@@ -34,7 +42,13 @@
       "plugin:vue/essential",
       "@vue/airbnb"
     ],
-    "rules": {},
+    "rules": {
+      "no-restricted-syntax": 0,
+      "no-param-reassign": 0,
+      "consistent-return": 0,
+      "no-console": 0,
+      "guard-for-in": 0
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
